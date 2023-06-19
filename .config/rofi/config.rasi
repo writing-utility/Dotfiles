@@ -1,0 +1,4 @@
+configuration {
+	modi: "drun,window,power:/home/amen/.scripts/rofi_scripts/power.sh";
+}
+@theme "./menu.rasi"

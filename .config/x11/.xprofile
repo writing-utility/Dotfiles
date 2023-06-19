@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# monitor's resolution
+monitor="$(xrandr -q | grep VGA | cut -d " " -f1 | sed -n 1p)"
+xrandr --newmode 1360x768_60.00   84.75  1360 1432 1568 1776  768 771 781 798 -hsync +vsync
+xrandr --addmode $monitor "1360x768_60.00"
+xrandr --output $monitor --mode "1360x768_60.00"
+
+# keyboard layout
+setxkbmap fr
+
+# run .xresources
+xrdb "$HOME/.Xresources"
+
+#ADD auto-mount /dev/sda5

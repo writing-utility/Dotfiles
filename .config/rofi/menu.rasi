@@ -1,0 +1,61 @@
+configuration {
+	    show-icons: true;
+}
+
+* {
+    cyan: #00a3ff;
+    white: #cacaca;
+    bg: #1d1f21;
+
+    font: "Ubuntu 10";
+    background-color: @bg;
+    text-color: @white;
+}
+
+window {
+    location: center;
+    anchor: center;
+    show-icons: true;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    height: 300px;
+		border: 2px;
+		border-color:#00a3ff;
+    children: [ horibox ];
+}
+
+horibox {
+    orientation: Vertical;
+    children: [ entry, listview ];
+}
+
+entry {
+    expand: false;
+    width: 150px;
+    padding: 7px 10px;
+}
+
+listview {
+    layout: Vertical;
+    lines: 100;
+}
+
+element {
+    background-color: transparent;
+		show-icons: true;
+    text-color: @white;
+    padding: 7px 10px;
+}
+
+element selected {
+  	text-color: @bg;
+    background-color: @cyan;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+		size: 14px;
+}
+

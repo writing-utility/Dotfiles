@@ -1,0 +1,6 @@
+#!/bin/sh
+
+~/.fehbg &
+tint2 &
+sxhkd &
+#picom &

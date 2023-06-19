@@ -1,0 +1,5 @@
+#!/bin/sh
+
+xsetroot -solid "#1c1d21"
+slstatus &
+dunst &

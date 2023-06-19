@@ -1,0 +1,51 @@
+env:
+  TERM: alacritty
+window:
+  padding:
+    x: 10
+    y: 10
+  opacity: 1 
+  title: Terminal
+scrolling:
+  history: 10000
+  multiplier: 3
+font:
+  normal:
+    family: monospace 
+    style: Regular
+  size: 11.0
+colors:
+  primary:
+    background: '0x1c1d21'
+    foreground: '0x839496'
+  cursor:
+    text: CellBackground
+    cursor: CellForeground
+  normal:
+    black:   '0x646464'
+    red:     '0xf58e8e'
+    green:   '0xa9d3ab'
+    yellow:  '0xfed37e'
+    blue:    '0x7aabd4'
+    magenta: '0xd6add5'
+    cyan:    '0x79d4d5'
+    white:   '0xd4d4d4'
+  bright:
+    black:   '0x646464'
+    red:     '0xf58e8e'
+    green:   '0xa9d3ab'
+    yellow:  '0xfed37e'
+    blue:    '0x7aabd4'
+    magenta: '0xd6add5'
+    cyan:    '0x79d4d5'
+    white:   '0xd4d4d4'
+bell:
+  animation: Ease
+  duration: 200
+  color: '0xd16969'
+cursor:
+    shape: Beam
+shell:
+  program: /bin/zsh
+  args:
+    - --login

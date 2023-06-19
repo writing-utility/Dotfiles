@@ -1,0 +1,44 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+[ "$(tty)" = "/dev/tty1"  ] && ! pgrep -x Xorg >/dev/null && exec startx -- vt1 &> /dev/null
+
+PS1=""
+#PS1+='\[\e[0;1;38;5;39m\]\w\[\e[0m\] '
+#PS1+='\[\e[0;38;5;39m\]❯\[\e[0m\] '
+PS1+="\[\e[0;1m\]\w\[\e[0m\] "
+PS1+=' '
+
+export EDITOR="vim"
+export BROWSER="brave"
+export PATH="$PATH:/home/amen/.local/bin"
+
+alias ls='ls --color=auto'
+alias la='ls --color=auto -a'
+alias ll='ls --color=auto -la'
+alias grep='grep --color=auto'
+alias pac='sudo pacman'
+
+# ~/.scripts
+alias db='sudo mount /dev/sda5 ~/database'
+alias notify-reminder='$HOME/.scripts/notification_reminder/cli'
+alias alacritty_theme="$HOME/.scripts/theme/alacritty_theme"
+
+alias v='vim'
+alias r='ranger'
+alias p="pass"
+alias j="jrnl"
+
+# kitty terminal
+if [ $TERM == "xterm-kitty" ];then
+	alias img="kitty +kitten icat"
+fi
+
+alias c="ng generate component component/"
+
+# Terminal autostart app
+~/.scripts/fetch_hardware

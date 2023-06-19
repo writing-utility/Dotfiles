@@ -1,0 +1,9 @@
+#!/bin/sh
+
+sxhkd -c ~/.config/bspwm/keybindings &
+#feh ~/.theme/wallpapers/bspwm.jpg &
+xsetroot -solid "#1c1d21"
+xsetroot -cursor_name left_ptr
+dunst &
+#picom &
+#~/.config/polybar/launch.sh &

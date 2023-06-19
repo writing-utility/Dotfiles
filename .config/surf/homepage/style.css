@@ -1,0 +1,67 @@
+* {
+  font-family: Ubuntu;
+  box-sizing: border-box;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+#root {
+  background-color: #1c1d21;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#searchInput {
+  background-color: #333437;
+  border-radius: 1em;
+  color: #eeeeee;
+  padding: 1em 2em;
+  outline: none;
+  height: 5%;
+  width: 300px;
+  border: none;
+  font-size: 1.25em;
+}
+
+#searchInput:placeholder {
+  color: #cacaca;
+}
+
+.autocomplete {
+  position: absolute
+}
+.autocomplete-items {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  border-bottom: none;
+  width: 300px;
+  border-top: none;
+  z-index: 99;
+  /*position the autocomplete items to be the same width as the container:*/
+  top: 57%;
+  transform: translate(-50%,-50%);
+  left: 50%;
+}
+.autocomplete-items div {
+  padding: 1em 2em;
+  cursor: pointer;
+  background-color: #fff;
+  border-bottom: 1px solid #d4d4d4;
+}
+.autocomplete-items div:hover {
+  /*when hovering an item:*/
+  background-color: #e9e9e9;
+}
+.autocomplete-active {
+  /*when navigating through the items using the arrow keys:*/
+  background-color: DodgerBlue !important;
+  color: #ffffff;
+}

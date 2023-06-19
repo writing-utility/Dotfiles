@@ -1,0 +1,13 @@
+#
+# ~/.bash_profile
+#
+
+[[ -f ~/.bashrc ]] && . ~/.bashrc
+
+# Non Login manger boot
+#if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+#        exec startx
+#fi
+
+# Created by `pipx` on 2022-07-10 19:00:01
+export PATH="$PATH:/home/amen/.local/bin"

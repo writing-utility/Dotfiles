@@ -1,0 +1,44 @@
+* {
+    cyan: #00A3FF;
+    white: #BFE8FF;
+    bg: #234a53;
+
+    font: "Ubuntu 32";
+    background-color: @bg;
+		margin: 0;
+    text-color: @white;
+}
+
+window {
+    location: center;
+    anchor: center;
+    padding: 0;
+    width: 309px;
+    height: 103px;
+    children: [ listview ];
+}
+
+listview {
+    layout: Horizontal;
+    lines: 100;
+}
+
+element {
+		width:100px;
+		height:100px;
+		margin:0;
+    background-color: transparent;
+    text-color: @white;
+    padding: 20px 0px 30px 21px;
+}
+
+element selected {
+	text-color: @bg;
+    background-color: @cyan;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+		text-align:center;
+    text-color:       inherit;
+}

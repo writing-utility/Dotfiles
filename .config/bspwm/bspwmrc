@@ -1,0 +1,25 @@
+#!/bin/sh
+
+$HOME/.config/bspwm/autostart
+
+bspc monitor VGA-2 -d 1 2 3
+bspc monitor VGA-1-1 -d 4 5 6
+
+bspc rule -a TelegramDesktop state=floating
+
+bspc config border_width 2
+bspc config window_gap 14
+#bspc config top_padding 32
+bspc config top_padding 0
+bspc config bottom_padding 0
+bspc config left_padding 0
+bspc config right_padding 0
+
+bspc config normal_border_color "#2d3036"
+bspc config focused_border_color "#474c57"
+# bspc config focused_border_color "#00a3ff"
+bspc config urgent_border_color "#D33737"
+
+bspc config split_ratio	0.5
+bspc config borderless_monocle	true
+bspc config focus_follows_pointer true

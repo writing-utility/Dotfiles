@@ -1,0 +1,51 @@
+* {
+    cyan: #3DA2FF;
+    white: #ffffff;
+    bg: #3d4051;
+
+    height: 30px;
+    font: "Ubuntu 10";
+    background-color: @bg;
+    text-color: @white;
+}
+
+window {
+    location: south;
+    anchor: south;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    children: [ horibox ];
+}
+
+horibox {
+    orientation: horizontal;
+    children: [ entry, listview ];
+}
+
+entry {
+    expand: false;
+    width: 150px;
+    padding: 7px 10px;
+}
+
+listview {
+    layout: horizontal;
+    lines: 100;
+}
+
+element {
+    background-color: transparent;
+    text-color: @white;
+    padding: 7px 10px;
+}
+
+element selected {
+	text-color: @bg;
+    background-color: @cyan;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color:       inherit;
+}
